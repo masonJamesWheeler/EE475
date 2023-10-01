@@ -3,31 +3,27 @@
     let teamMembers = [
         {
             name: "Mason Wheeler",
-            role: "Senior",
+            role: "Nothing yet",
             contact: "360-975-8555",
             email: "mwheel@uw.edu",
-            location: "Vancouver, WA",
         },
         {
-            name: "Teammate 1",
-            role: "Position",
-            contact: "Contact Number",
-            email: "Email Address",
-            location: "Location",
+            name: "Diana Ochoa-Mendoza",
+            role: "Nothing yet",
+            contact: "509-831-9707",
+            email: "ochoadi@uw.edu",
         },
         {
-            name: "Teammate 2",
-            role: "Position",
-            contact: "Contact Number",
-            email: "Email Address",
-            location: "Location",
+            name: "Quentin Fiessinger",
+            role: "Nothing yet",
+            contact: "425-372-6964",
+            email: "qfiess@uw.edu",
         },
         {
-            name: "Teammate 3",
-            role: "Position",
-            contact: "Contact Number",
-            email: "Email Address",
-            location: "Location",
+            name: "Lucy Camblin",
+            role: "Nothing yet",
+            contact: "206-483-9614",
+            email: "lcambl@uw.edu",
         }
     ];
   </script>
@@ -45,7 +41,6 @@
                   <p class="role">{member.role}</p>
                   <p>{member.contact}</p>
                   <p><a href="mailto:{member.email}">{member.email}</a></p>
-                  <p>{member.location}</p>
               </div>
           {/each}
       </section>
