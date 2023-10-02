@@ -61,10 +61,10 @@
 </script>
 
 
-<div class="kickstarter-page bg-gray-100 p-5">
+<div class="kickstarter-page p-5">
 
     <!-- Header -->
-    <header class="flex justify-between items-center bg-violet-200 p-5 rounded-lg shadow-md mb-5">
+    <header class="flex justify-between items-center p-5 rounded-lg shadow-md mb-5 border-2">
         <img src="logo.png" alt="Your Project Logo" class="w-48">
         <nav>
             <a href="#overview" class="text-text-color mx-3 hover:bg-primary-color hover:text-white rounded py-1 px-2 transition">Overview</a>
@@ -89,7 +89,7 @@
 
     <!-- Pledge Options -->
     <div class="section-container">
-    <section id="pledge-options" class="bg-violet-200 p-5 rounded-lg shadow-md my-5">
+    <section id="pledge-options" class=" p-5 rounded-lg shadow-md my-5 border-2">
         <h2 class="text-3xl font-bold tracking-wide mb-5 text-slate-800">
             Support This Project
         </h2>
@@ -105,11 +105,11 @@
 
 <!-- Updates Section -->
 <div class="section-container">
-<section id="updates" class="my-5 px-5 py-3 bg-violet-200 shadow-lg rounded-lg">
+<section id="updates" class="my-5 px-5 py-3 shadow-lg rounded-lg border-2">
     <h2 class="text-2xl font-bold mb-4 text-slate-800">Latest Updates</h2>
     {#each updates.slice(0, 3) as update} <!-- Display only the 3 most recent updates -->
-        <article class="update mb-4 bg-white rounded-md p-4">
-            <h3 class="text-xl font-semibold mb-2">{update.title}</h3>
+        <article class="update mb-4 bg-white rounded-md p-4 border-2">
+            <h3 class="text-xl font-semibold mb-2 underline">{update.title}</h3>
             <p class="mb-2 text-gray-700">{update.content}</p>
             <p class="text-sm text-gray-500">{update.date}</p>
         </article>
@@ -133,13 +133,13 @@
 
 <!-- Comments Section -->
 <div class="section-container">
-<section id="comments" class="mt-10 px-5 py-3 bg-violet-200 shadow-lg rounded-lg">
+<section id="comments" class="mt-10 px-5 py-3 shadow-lg rounded-lg border-2">
     <h2 class="text-2xl font-bold mb-4 text-slate-800">Community Comments</h2>
     {#if comments.length === 0}
         <p class="text-gray-600">No comments yet. Be the first to comment!</p>
     {:else}
         {#each comments.slice(0, 3) as comment} <!-- Display only the 3 most recent comments -->
-        <article class="comment mb-4 border-b last:border-b-0 pb-4">
+        <article class="comment mb-4 border-b last:border-b-0 pb-4 border-2">
             <p class="mb-2 text-gray-700">{comment.content}</p>
             <p class="text-sm text-gray-500">Posted on {formatDate(comment.created_at)}</p>
         </article>        
@@ -150,7 +150,7 @@
             </button>
             {#if expandComments}
                 {#each comments.slice(3) as comment} <!-- Display the older comments -->
-                <article class="comment mt-4">
+                <article class="comment mt-4 border-2">
                     <p class="mb-2 text-gray-700">{comment.content}</p>
                     <p class="text-sm text-gray-500">Posted on {formatDate(comment.created_at)}</p>
                 </article>                
@@ -163,10 +163,10 @@
 
     <!-- Form to add new comment -->
     <div class="section-container">
-    <div class="comment-form mt-5 bg-violet-200">
+    <div class="comment-form mt-5 border-2">
         <label for="newComment text-xl" class = "text-2xl font-bold text-slate-800">Join the discussion:</label>
         <textarea id="newComment" placeholder="Share your thoughts..." bind:value={newCommentContent}></textarea>
-        <button on:click={handleCommentSubmit} class = "bg-white rounded-md text-slate-800 p-2 font-bold hover:scale-105">Post Comment</button>
+        <button on:click={handleCommentSubmit} class = "bg-white rounded-md text-slate-800 p-2 font-bold hover:scale-105 border-2">Post Comment</button>
     </div>
     </div>
     <!-- ... rest of the code ... -->

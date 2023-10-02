@@ -39,10 +39,10 @@
           <span class="sr-only">Toggle main menu</span>
         </button>
       </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
         <div class="flex flex-shrink-0 items-center">
           <img class="h-8 w-auto" src="https://www.pngkey.com/png/full/306-3068414_download-university-of-washington-logo-white.png" alt="University of Washington">
-        <div class="hidden sm:ml-6 sm:block">
+        <div class="hidden sm:ml-6 md:block">
           <div class="flex space-x-4">
             <!-- Links are updated here -->
             <a href="./" class:bg-gray-900={currentPage === 'Dashboard'} class:text-white={currentPage === 'Dashboard'} on:click={() => setActivePage('Dashboard')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
