@@ -61,7 +61,7 @@
 </script>
 
 
-<div class="kickstarter-page bg-violet-600 p-5">
+<div class="kickstarter-page bg-gray-100 p-5">
 
     <!-- Header -->
     <header class="flex justify-between items-center bg-violet-200 p-5 rounded-lg shadow-md mb-5">
@@ -77,7 +77,7 @@
 
     <!-- Overview -->
     <div class="section-container">
-    <section id="overview" class="text-center my-5 text-white font-bold">
+    <section id="overview" class="text-center my-5 text-gray-800 font-bold">
         <h1 class="text-4xl mb-4">Your Project Name</h1>
         <p class="text-xl mb-4">A brief description of your project goes here.</p>
         <video controls class="mx-auto rounded shadow-md">
