@@ -11,6 +11,8 @@
         const response = await get();
         if (response.body && Array.isArray(response.body)) {
             logs = response.body;
+            // sort the logs by date
+            logs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         } else {
             console.error(response.body.error);
             logs = [];
@@ -68,7 +70,7 @@
     {#if isLoading} <!-- Added this conditional block -->
         <div class="loader"></div>
     {:else}
-        {#each logs.slice().reverse() as log (log.id)}
+        {#each logs as log (log.id)}
             <LogItem bind:log on:like={e => handleLike(e.detail)}/>
         {/each}
     {/if}
