@@ -35,6 +35,18 @@
     body, html {
         @apply m-0 p-0;
     }
+    body, html {
+        @apply m-0 p-0;
+    }
+
+    img[data-active='false'] {
+        opacity: 0;
+    }
+
+    img[data-active='true'] {
+        opacity: 1;
+    }
+
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +54,7 @@
     <!-- Left: Image Card -->
     <div class="w-full md:w-1/2 h-64 md:h-96 bg-white rounded-xl overflow-hidden shadow-2xl transition-transform duration-300 relative mb-8 md:mb-0">
         {#each dogs as dog, index}
-            <img class="w-full h-full object-contain absolute top-0 left-0 transition-opacity duration-1000" src={dog} alt="Dog breed" data-active={index === currentDog} />
+            <img class="w-full h-full object-contain absolute top-0 left-0 transition-opacity duration-1000" src={dog} alt="Dog breed" data-active={index === currentDog ? 'true' : 'false'} />
         {/each}
     </div>
 
