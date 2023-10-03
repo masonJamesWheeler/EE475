@@ -1,27 +1,43 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import LogItem from '../components/LogItem.svelte';
-  import { get } from '../lib/api/logs';
+  import HeroHome from '../components/Hero_Home.svelte';
+  import { get, post, likeLog, postComment } from '../lib/api/logs'; // Imported additional methods
   import type { Log } from '../lib/api/logs';
 
   let recentLogs: Log[] = [];
   let isLoading = true;
 
-    async function fetchRecentLogs() {
-      const response = await get();
-      if (response.status === 500) {
-        console.error(response.body.error);
-        return;  // Handle the error appropriately
-      }
-      if (Array.isArray(response.body)) {
-        recentLogs = response.body.slice(0, 3);
-      }
-      isLoading = false;
+  async function fetchRecentLogs() {
+    const response = await get();
+    if (response.status === 500) {
+      console.error(response.body.error);
+      return;  // Handle the error appropriately
     }
+    if (Array.isArray(response.body)) {
+      recentLogs = response.body.slice(0, 3);
+    }
+    isLoading = false;
+  }
 
-  fetchRecentLogs();
+  async function handleLike(logId: number) {
+    const response = await likeLog(logId);
+    if (response && response.status === 200) {
+      await fetchRecentLogs();
+    }
+  }
+
+
+
+  let newLogContent: string = "";
+  let newCommentContent: string = "";
+
+  onMount(fetchRecentLogs);
 </script>
 
+<HeroHome />
 <!-- Dashboard Layout -->
+
 <div class="dashboard">
   <header>
       <h1>Project Dashboard</h1>
@@ -33,9 +49,9 @@
       <h2>Recent Work Logs</h2>
       {#if isLoading}
           <div class="loader"></div>
-      {:else}
-          {#each recentLogs as log}
-              <LogItem log={log} />
+          {:else}
+          {#each recentLogs.slice().reverse() as log (log.id)}
+              <LogItem bind:log on:like={e => handleLike(e.detail)}/>
           {/each}
       {/if}
   </section>
