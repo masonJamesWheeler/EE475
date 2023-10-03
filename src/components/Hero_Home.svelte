@@ -27,14 +27,12 @@
 
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class="relative h-screen w-screen">
-
-    <!-- Background Image with overlaid content -->
-    <div class="background-container">
-        <div class="text-center content">
-            <h1 class="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">Dog Pulling You Out Of <span class="gradient-text">This World?</span></h1>
-            <p class="text-xl md:text-2xl lg:text-2xl text-white">Experience Zero-G Resistance.</p>
+    <div class="relative h-screen w-screen">
+        <!-- Background Image with overlaid content -->
+        <div class="background-container h-screen">
+            <div class="text-center content">
+                <h1 class="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">Dog Pulling You Out Of <span class="gradient-text">This World?</span></h1>
+                <p class="text-xl md:text-2xl lg:text-2xl text-white">Experience Zero-G Resistance.</p>
+            </div>
         </div>
     </div>
-
-</div>

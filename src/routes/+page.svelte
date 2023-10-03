@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import LogItem from '../components/LogItem.svelte';
   import HeroHome from '../components/Hero_Home.svelte';
+  import Pitch_Cards from '../components/Dog_Silo.svelte';
   import { get, post, likeLog, postComment } from '../lib/api/logs'; // Imported additional methods
   import type { Log } from '../lib/api/logs';
 
@@ -36,6 +37,7 @@
 </script>
 
 <HeroHome />
+<Pitch_Cards />
 <!-- Dashboard Layout -->
 
 <div class="dashboard">
