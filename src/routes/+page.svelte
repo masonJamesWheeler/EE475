@@ -16,6 +16,8 @@
       return;  // Handle the error appropriately
     }
     if (Array.isArray(response.body)) {
+      // sort the recent logs by most recent date
+      recentLogs = response.body.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
       recentLogs = response.body.slice(0, 3);
     }
     isLoading = false;
@@ -52,7 +54,7 @@
       {#if isLoading}
           <div class="loader"></div>
           {:else}
-          {#each recentLogs.slice().reverse() as log (log.id)}
+          {#each recentLogs as log (log.id)}
               <LogItem bind:log on:like={e => handleLike(e.detail)}/>
           {/each}
       {/if}
