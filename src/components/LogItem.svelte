@@ -24,7 +24,7 @@
     <div class="log-content">
         <div class="log-author">{log.author}</div>
         <div class="log-date">{formatDate(log.date)}</div>
-        <div class="log-content-text">{log.content}</div>
+        <div class="log-content-text whitespace-pre-line">{log.content}</div>
     </div>
     <div class="actions">
         <button on:click={handleLike}>

@@ -105,31 +105,34 @@
 
 <!-- Updates Section -->
 <div class="section-container">
-<section id="updates" class="my-5 px-5 py-3 shadow-lg rounded-lg border-2">
-    <h2 class="text-2xl font-bold mb-4 text-slate-800">Latest Updates</h2>
-    {#each updates.slice(0, 3) as update} <!-- Display only the 3 most recent updates -->
-        <article class="update mb-4 bg-white rounded-md p-4 border-2">
-            <h3 class="text-xl font-semibold mb-2 underline">{update.title}</h3>
-            <p class="mb-2 text-gray-700">{update.content}</p>
-            <p class="text-sm text-gray-500">{update.date}</p>
-        </article>
-    {/each}
-    {#if updates.length > 3}
-        <button on:click={() => expandUpdates = !expandUpdates} class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">
-            {expandUpdates ? 'Show Less' : 'Show More'}
-        </button>
+    <section id="updates" class="my-5 px-5 py-3 shadow-lg rounded-lg border-2">
+        <h2 class="text-2xl font-bold mb-4 text-slate-800">Latest Updates</h2>
+        {#each updates.slice(0, 3) as update} <!-- Display only the 3 most recent updates -->
+            <article class="update mb-4 bg-white rounded-md p-4 border-2">
+                <h3 class="text-xl font-semibold mb-2 underline">{update.title}</h3>
+                <p class="mb-2 text-gray-700 whitespace-pre-line">{update.content}</p>
+                <p class="text-sm text-gray-500">{update.date}</p>
+            </article>
+        {/each}
+        
         {#if expandUpdates}
-            {#each updates.slice(3) as update} <!-- Display the older updates -->
-                <article class="update mt-4">
-                    <h3 class="text-xl font-semibold mb-2">{update.title}</h3>
-                    <p class="mb-2 text-gray-700">{update.content}</p>
+            {#each updates.slice(3) as update} <!-- Display the older updates when expanded -->
+                <article class="update mt-4 bg-white rounded-md p-4 border-2">
+                    <h3 class="text-xl font-semibold mb-2 underline">{update.title}</h3>
+                    <p class="mb-2 text-gray-700 whitespace-pre-line">{update.content}</p>
                     <p class="text-sm text-gray-500">{update.date}</p>
                 </article>
             {/each}
         {/if}
-    {/if}
-</section>
-</div>
+    
+        {#if updates.length > 3}
+            <button on:click={() => expandUpdates = !expandUpdates} class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded mt-4">
+                {expandUpdates ? 'Show Less' : 'Show More'}
+            </button>
+        {/if}
+    </section>
+    </div>
+    
 
 <!-- Comments Section -->
 <div class="section-container">
@@ -139,7 +142,7 @@
         <p class="text-gray-600">No comments yet. Be the first to comment!</p>
     {:else}
         {#each comments.slice(0, 3) as comment} <!-- Display only the 3 most recent comments -->
-        <article class="comment mb-4 border-b last:border-b-0 pb-4 border-2">
+        <article class="comment border-b last:border-b-0 p-4 border-2 m-6">
             <p class="mb-2 text-gray-700">{comment.content}</p>
             <p class="text-sm text-gray-500">Posted on {formatDate(comment.created_at)}</p>
         </article>        
