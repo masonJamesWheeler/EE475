@@ -52,8 +52,18 @@
             <a href="project-proposal" class:bg-gray-900={currentPage === 'Project Proposal'} class:text-white={currentPage === 'ProjectProposal'} on:click={() => setActivePage('ProjectProposal')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Project Proposal</a>
             <a href="kickstarter" class:bg-gray-900={currentPage === 'Kickstarter'} class:text-white={currentPage === 'Kickstarter'} on:click={() => setActivePage('Kickstarter')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kickstarter</a>
             <a href="weekly-reports" class:bg-gray-900={currentPage === 'Weekly Reports'} class:text-white={currentPage === 'Weekly Reports'} on:click={() => setActivePage('Weekly Reports')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Weekly Reports</a>
-            <a href="https://github.com/masonJamesWheeler/EE475" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
+            <!-- Calender Link  -->
+            <a href="calendar" class:bg-gray-900={currentPage === 'Calendar'} class:text-white={currentPage === 'Calendar'} on:click={() => setActivePage('Calendar')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
+              <!-- Calendar SVG Icon -->
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="mr-2 fill-current">
+                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path>
+              </svg>
+              Calendar
+          </a>
+            <a href="https://github.com/masonJamesWheeler/EE475" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
+              
+              <!-- Github Link -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="mr-2 fill-current">
                   <path d="M12 2C6.48 2 2 6.48 2 12c0 4.4183 2.865 8.1663 6.84 9.49.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.68.59-3.37-1.15-3.37-1.15-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.84.09-.65.35-1.09.64-1.34-2.14-.24-4.39-1.07-4.39-4.78 0-1.06.38-1.92 1-2.6-.1-.24-.44-1.24.1-2.58 0 0 .81-.26 2.66 1a9.3 9.3 0 0 1 2.42-.33c.82 0 1.63.11 2.41.32 1.85-1.28 2.66-1 2.66-1 .54 1.34.2 2.34.1 2.58.62.68 1 1.54 1 2.6 0 3.72-2.26 4.54-4.41 4.77.36.31.69.93.69 1.87 0 1.35-.01 2.44-.01 2.78 0 .27.18.58.68.49C19.14 20.166 22 16.418 22 12c0-5.52-4.48-10-10-10z"></path>
               </svg>
               Code Repo
@@ -76,7 +86,17 @@
       <a href="team" class:bg-gray-900={currentPage === 'Team'} class:text-white={currentPage === 'Team'} on:click={() => setActivePage('Team')} class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
       <a href="kickstarter" class:bg-gray-900={currentPage === 'Kickstarter'} class:text-white={currentPage === 'Kickstarter'} on:click={() => setActivePage('Kickstarter')} class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Kickstarter</a>
       <a href="weekly-reports" class:bg-gray-900={currentPage === 'Weekly Reports'} class:text-white={currentPage === 'Weekly Reports'} on:click={() => setActivePage('Weekly Reports')} class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Weekly Reports</a>
+      <!-- Calender Link -->
+      <a href="calendar" class:bg-gray-900={currentPage === 'Calendar'} class:text-white={currentPage === 'Calendar'} on:click={() => setActivePage('Calendar')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
+        <!-- Calendar SVG Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="mr-2 fill-current">
+            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path>
+        </svg>
+        Calendar
+    </a>
       <a href="https://github.com/masonJamesWheeler/EE475" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium flex items-center">
+
+        <!-- Github Link -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="mr-2 fill-current">
           <path d="M12 2C6.48 2 2 6.48 2 12c0 4.4183 2.865 8.1663 6.84 9.49.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.68.59-3.37-1.15-3.37-1.15-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.84.09-.65.35-1.09.64-1.34-2.14-.24-4.39-1.07-4.39-4.78 0-1.06.38-1.92 1-2.6-.1-.24-.44-1.24.1-2.58 0 0 .81-.26 2.66 1a9.3 9.3 0 0 1 2.42-.33c.82 0 1.63.11 2.41.32 1.85-1.28 2.66-1 2.66-1 .54 1.34.2 2.34.1 2.58.62.68 1 1.54 1 2.6 0 3.72-2.26 4.54-4.41 4.77.36.31.69.93.69 1.87 0 1.35-.01 2.44-.01 2.78 0 .27.18.58.68.49C19.14 20.166 22 16.418 22 12c0-5.52-4.48-10-10-10z"></path>
         </svg>
