@@ -1,10 +1,13 @@
 <script>
   import { onMount} from 'svelte';
+  import casing from "../lib/images/prototype/casing.png";
+  import cross_section from "../lib/images/prototype/cross_section.png";
+  import see_through from "../lib/images/prototype/see_through.png";
 
-  const images = [
-      './src/lib/images/see_through.png',
-      './src/lib/images/casing.png',
-      './src/lib/images/cross_section.png'
+  let images = [
+      casing,
+      cross_section,
+      see_through
   ];
   
   let currentImageIndex = 0;
