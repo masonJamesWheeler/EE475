@@ -53,12 +53,8 @@
             <a href="kickstarter" class:bg-gray-900={currentPage === 'Kickstarter'} class:text-white={currentPage === 'Kickstarter'} on:click={() => setActivePage('Kickstarter')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kickstarter</a>
             <a href="weekly-reports" class:bg-gray-900={currentPage === 'Weekly Reports'} class:text-white={currentPage === 'Weekly Reports'} on:click={() => setActivePage('Weekly Reports')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Weekly Reports</a>
             <!-- Calender Link  -->
-            <a href="calendar" class:bg-gray-900={currentPage === 'Calendar'} class:text-white={currentPage === 'Calendar'} on:click={() => setActivePage('Calendar')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
-              <!-- Calendar SVG Icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="mr-2 fill-current">
-                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path>
-              </svg>
-              Calendar
+            <a href="prototype" class:bg-gray-900={currentPage === 'Prototype'} class:text-white={currentPage === 'Calendar'} on:click={() => setActivePage('Calendar')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
+              Prototype
           </a>
             <a href="https://github.com/masonJamesWheeler/EE475" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
               
@@ -87,12 +83,8 @@
       <a href="kickstarter" class:bg-gray-900={currentPage === 'Kickstarter'} class:text-white={currentPage === 'Kickstarter'} on:click={() => setActivePage('Kickstarter')} class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Kickstarter</a>
       <a href="weekly-reports" class:bg-gray-900={currentPage === 'Weekly Reports'} class:text-white={currentPage === 'Weekly Reports'} on:click={() => setActivePage('Weekly Reports')} class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Weekly Reports</a>
       <!-- Calender Link -->
-      <a href="calendar" class:bg-gray-900={currentPage === 'Calendar'} class:text-white={currentPage === 'Calendar'} on:click={() => setActivePage('Calendar')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
-        <!-- Calendar SVG Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="mr-2 fill-current">
-            <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"></path>
-        </svg>
-        Calendar
+      <a href="prototype" class:bg-gray-900={currentPage === 'prototype'} class:text-white={currentPage === 'Calendar'} on:click={() => setActivePage('Calendar')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
+        Prototype
     </a>
       <a href="https://github.com/masonJamesWheeler/EE475" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium flex items-center">
 

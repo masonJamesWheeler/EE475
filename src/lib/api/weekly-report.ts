@@ -11,7 +11,7 @@ export default supabase;
 export interface WeeklyReport {
   id: number;
   content: string;
-  date: string;
+  created_at: string;
   author: string;
   likes: number;
   fileURL?: string| null;

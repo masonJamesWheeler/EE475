@@ -1,0 +1,8 @@
+module register_64bit(input [63:0] d, input en, input reset, input clk, output reg [63:0] q);
+    genvar i;
+    generate
+        for(i = 0; i < 64; i=i+1) begin
+            D_FF flipflop(.d(d[i]), .reset(reset), .clk(clk), .q(q[i]));
+        end
+    endgenerate
+endmodule

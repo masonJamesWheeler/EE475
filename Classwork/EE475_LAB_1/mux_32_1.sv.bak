@@ -1,0 +1,7 @@
+module mux_32_1(input [31:0] inputs, input [4:0] sel, output out);
+    wire [4:0] i;
+    assign out = (i == 5'd0) ? inputs[0] : 
+                 (i == 5'd1) ? inputs[1] : 
+                 // ... for all cases
+                 inputs[31];
+endmodule

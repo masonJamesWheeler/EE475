@@ -10,8 +10,9 @@
         const response = await get();
         if (response.body && Array.isArray(response.body)) {
             reports = response.body;
+            console.log(reports);
             // sort the reports by date
-            reports.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+            reports.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
         } else {
             console.error(response.body.error);
             reports = [];

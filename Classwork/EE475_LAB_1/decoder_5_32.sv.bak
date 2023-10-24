@@ -1,0 +1,6 @@
+module decoder_5_32(input [4:0] sel, output reg [31:0] out);
+    always @(*) begin
+        out = 32'b0;
+        out[sel] = 1'b1;
+    end
+endmodule
