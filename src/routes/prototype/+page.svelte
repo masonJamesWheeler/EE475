@@ -1,8 +1,8 @@
 <script>
   import { onMount} from 'svelte';
-  import casing from "../lib/images/prototype/casing.png";
-  import cross_section from "../lib/images/prototype/cross_section.png";
-  import see_through from "../lib/images/prototype/see_through.png";
+  import casing from "../../lib/images/casing.png"
+  import cross_section from "../../lib/images/cross_section.png";
+  import see_through from "../../lib/images/see_through.png";
 
   let images = [
       casing,
