@@ -53,7 +53,7 @@
             <a href="kickstarter" class:bg-gray-900={currentPage === 'Kickstarter'} class:text-white={currentPage === 'Kickstarter'} on:click={() => setActivePage('Kickstarter')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kickstarter</a>
             <a href="weekly-reports" class:bg-gray-900={currentPage === 'Weekly Reports'} class:text-white={currentPage === 'Weekly Reports'} on:click={() => setActivePage('Weekly Reports')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Weekly Reports</a>
             <!-- Calender Link  -->
-            <a href="prototype" class:bg-gray-900={currentPage === 'Prototype'} class:text-white={currentPage === 'Calendar'} on:click={() => setActivePage('Calendar')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
+            <a href="prototype" class:bg-gray-900={currentPage === 'Prototype'} class:text-white={currentPage === 'Prototype'} on:click={() => setActivePage('Prototype')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
               Prototype
           </a>
             <a href="https://github.com/masonJamesWheeler/EE475" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
@@ -83,7 +83,7 @@
       <a href="kickstarter" class:bg-gray-900={currentPage === 'Kickstarter'} class:text-white={currentPage === 'Kickstarter'} on:click={() => setActivePage('Kickstarter')} class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Kickstarter</a>
       <a href="weekly-reports" class:bg-gray-900={currentPage === 'Weekly Reports'} class:text-white={currentPage === 'Weekly Reports'} on:click={() => setActivePage('Weekly Reports')} class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Weekly Reports</a>
       <!-- Calender Link -->
-      <a href="prototype" class:bg-gray-900={currentPage === 'prototype'} class:text-white={currentPage === 'Calendar'} on:click={() => setActivePage('Calendar')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
+      <a href="prototype" class:bg-gray-900={currentPage === 'Prototype'} class:text-white={currentPage === 'Prototype'} on:click={() => setActivePage('Prototype')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center">
         Prototype
     </a>
       <a href="https://github.com/masonJamesWheeler/EE475" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium flex items-center">
