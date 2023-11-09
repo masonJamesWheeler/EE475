@@ -36,20 +36,40 @@
 }
 
 
-    // Sample data for pledge options
+    // Updating the project name and description
+    let projectName = "Smart Dog Collar";
+    let projectDescription = "SmartPaws is an innovative dog collar with a built-in ESP32 MCU and Load Cell that senses the pulling force on the leash. It provides vibration feedback to the dog for a better walking experience and includes an app for owners to track training progress.";
+
+    // Update pledge options with descriptions and rewards
     let pledgeOptions = [
         {
-            amount: 5,
-            description: "A description of what backers will get at this tier."
+            amount: 25,
+            description: "Thank you for your support! Receive project updates and your pet's name engraved on your first order"
         },
         {
-            amount: 25,
-            description: "A description of what backers will get at this tier."
+            amount: 75,
+            description: "Early bird special! Get one Smart collar at a discounted rate before it hits the market."
+        },
+        {
+            amount: 150,
+            description: "Receive the Smart collar and a 6-month subscription to the Smart Collar app with additional training features."
         },
     ];
 
     // Sample data for updates
     let updates = [
+        {
+            title : "Sensor is Working!",
+            content: "We are excited to announce that our sensor is working! We attached the collar to Quentin and took him for a walk.\
+            We gave him treats and pets when he was walking correctly",
+            date: "11-09-2023"
+        },
+        {
+            title: "We are funded!",
+            content: "We are excited to announce that daddy Bezos sold his soul for 1 million dollars to fund our project. We will be posting an update soon.",
+            date: "11-09-2023"
+        },
+
         {
             title: "Team is close to deciding the products direction",
             content: "The Team is set to meet this week to discuss the direction of the product. We will be posting an update soon.",
@@ -65,11 +85,11 @@
 
     <!-- Header -->
     <header class="flex justify-between items-center p-5 rounded-lg shadow-md mb-5 border-2">
-        <img src="logo.png" alt="Your Project Logo" class="w-48">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/University_of_Washington_Block_W_logo_RGB_brand_colors.SVG/1280px-University_of_Washington_Block_W_logo_RGB_brand_colors.SVG.png" alt="Your Project Logo" class="w-12 h-8">
         <nav>
             <a href="#overview" class="text-text-color mx-3 hover:bg-primary-color hover:text-white rounded py-1 px-2 transition">Overview</a>
             <a href="#updates" class="text-text-color mx-3 hover:bg-primary-color hover:text-white rounded py-1 px-2 transition">Updates</a>
-            <a href="#backers" class="text-text-color mx-3 hover:bg-primary-color hover:text-white rounded py-1 px-2 transition">Backers</a>
+            <a href="#featured-backers" class="text-text-color mx-3 hover:bg-primary-color hover:text-white rounded py-1 px-2 transition">Backers</a>
             <a href="#comments" class="text-text-color mx-3 hover:bg-primary-color hover:text-white rounded py-1 px-2 transition">Comments</a>
             <a href="#faq" class="text-text-color mx-3 hover:bg-primary-color hover:text-white rounded py-1 px-2 transition">FAQ</a>
         </nav>
@@ -78,12 +98,15 @@
     <!-- Overview -->
     <div class="section-container">
     <section id="overview" class="text-center my-5 text-gray-800 font-bold">
-        <h1 class="text-4xl mb-4">Your Project Name</h1>
-        <p class="text-xl mb-4">A brief description of your project goes here.</p>
-        <video controls class="mx-auto rounded shadow-md">
-            <source src="promo_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <h1 class="text-4xl mb-4">Smart Dog Collar</h1>
+        <p class="text-lg font-light mb-4">Introducing Our Smart Collar: The Future of Dog Training and Walking. Engineered with a precise Force Sensor, Our Smart Collar is designed to detect the force your dog applies to the leash and provide gentle vibratory feedback. This innovative approach encourages better leash habits for a more enjoyable walking experience. Paired with a dedicated app, it allows pet owners to track their furry friend's progress, understand walking behaviors, and set targets for a disciplined stroll. Support our journey on Kickstarter to bring harmony to your daily walks and redefine the bond between you and your dog.</p>
+        <!-- AI Generated image of the product -->
+        <div class = "flex justify-center">
+        <img src="src/lib/images/proto.png" alt="Smart Dog Collar" class="w-1/2 h-1/2">
+        </div>
+        <p class="text-md font-light mb-4">AI Generated image of our prototype</p>
+
+
     </section>
     </div>
 
@@ -172,12 +195,30 @@
         <button on:click={handleCommentSubmit} class = "bg-white rounded-md text-slate-800 p-2 font-bold hover:scale-105 border-2">Post Comment</button>
     </div>
     </div>
-    <!-- ... rest of the code ... -->
     
+    <div class="section-container">
+        <section id="featured-backers" class="my-5 p-5 rounded-lg shadow-md border-2">
+            <!-- Content featuring Elon Musk, Jeff Bezos, and Britney Spears -->
+            <h2 class="text-2xl font-bold mb-4 text-slate-800">Featured Backers</h2>
+            <div class="flex flex-wrap justify-center">
+                <div class="flex flex-col items-center justify-center p-5 m-5 border-2 rounded-lg shadow-md">
+                    <img src="https://variety.com/wp-content/uploads/2023/02/Elon-Musk.jpg?w=1000&h=563&crop=1" alt="Elon Musk" class="w-32 h-32 rounded-full">
+                    <h3 class="text-xl font-semibold mt-2">Elon Musk</h3>
+                    <p class="text-gray-700">CEO of Tesla</p>
+                </div>
+                <div class="flex flex-col items-center justify-center p-5 m-5 border-2 rounded-lg shadow-md">
+                    <img src="https://images.foxtv.com/static.q13fox.com/www.q13fox.com/content/uploads/2023/10/932/524/jeff-bezos-getty.jpg?ve=1&tl=1" alt="Jeff Bezos" class="w-32 h-32 rounded-full">
+                    <h3 class="text-xl font-semibold mt-2">Jeff Bezos</h3>
+                    <p class="text-gray-700">CEO of Amazon</p>
+                </div>
+                <div class="flex flex-col items-center justify-center p-5 m-5 border-2 rounded-lg shadow-md object-cover">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Britney_Spears_2013_%28Straighten_Crop%29.jpg" alt="Britney Spears" class="w-32 h-32 rounded-full">
+                    <h3 class="text-xl font-semibold mt-2">Britney Spears</h3>
+                    <p class="text-gray-700">Pop Star</p>
+                </div>
+        </section>
+    </div>
 
-    <footer class="bg-footer-bg text-white text-center p-8 mt-10 rounded-lg shadow-md">
-        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-    </footer>
 </div>
 
 <style>
