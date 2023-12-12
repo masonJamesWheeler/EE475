@@ -9,6 +9,7 @@
   let recentLogs: Log[] = [];
   let isLoading = true;
 
+
   async function fetchRecentLogs() {
     const response = await get();
     if (response.status === 500) {
