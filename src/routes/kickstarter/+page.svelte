@@ -3,6 +3,9 @@
     import type { KickstarterComment } from '../../lib/api/kickstarter';
 	import type { PageServerLoad } from './$types';
 
+    import KickStarterVideo from '$lib/IMG_1992.mp4';
+    import CollarImage from '$lib/CollarImage.png';
+
     let expandUpdates = false;
     let expandComments = false;
 
@@ -102,12 +105,18 @@
         <p class="text-lg font-light mb-4">Introducing Our Smart Collar: The Future of Dog Training and Walking. Engineered with a precise Force Sensor, Our Smart Collar is designed to detect the force your dog applies to the leash and provide gentle vibratory feedback. This innovative approach encourages better leash habits for a more enjoyable walking experience. Paired with a dedicated app, it allows pet owners to track their furry friend's progress, understand walking behaviors, and set targets for a disciplined stroll. Support our journey on Kickstarter to bring harmony to your daily walks and redefine the bond between you and your dog.</p>
         <!-- AI Generated image of the product -->
         <div class = "flex justify-center">
-        <img src="src/lib/images/proto.png" alt="Smart Dog Collar" class="w-1/2 h-1/2">
+        <img src={CollarImage} alt="Smart Dog Collar" class="w-1/2 h-1/2">
         </div>
-        <p class="text-md font-light mb-4">AI Generated image of our prototype</p>
-
-
+        <p class="text-md font-light mb-4">Image of our Prototype</p>
     </section>
+    </div>
+
+    <!-- Video Section -->
+    <div class="section-container mb-96 w-full">
+        <section class="my-5 text-center w-96 h-96 mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Our Project Video</h2>
+            <video src={KickStarterVideo} controls class="w-full h-auto"></video>
+        </section>
     </div>
 
     <!-- Pledge Options -->
